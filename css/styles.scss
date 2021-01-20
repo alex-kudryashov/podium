@@ -1,0 +1,471 @@
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('../fonts/Fira_Sans/FiraSans-Regular.ttf') format('ttf');
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'FiraSans';
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #23001E;
+    color: white;
+}
+
+h1   {
+    font-size: 55px;
+    line-height: 85px;
+    margin-bottom: 27px;
+}
+
+h2 {
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 60px;
+    color: #F2F2F2;
+}
+
+
+b {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.call-button {
+    display: block;
+    background: linear-gradient(0deg, #C9315C, #C9315C), linear-gradient(180deg, #C9315C 0%, #A11F44 100%);
+    box-shadow: 0px 20px 46px rgba(0, 0, 0, 0.12885);
+    border-radius: 30px;
+    height: 60px;
+    color: #ffffff;
+    border: none;
+    font-size: 18px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    &::before {
+        content: "";
+        display: block;
+        margin-left: 12px;
+        order: 1;
+        height: 60px;
+        border: 1px solid rgba(26, 23, 23, 0.228685);
+        box-shadow: 1px 0px 0px rgba(255, 255, 255, 0.105808);
+    }
+    &::after {
+        content: url("../img/whatsapp.png");
+        display: block;
+        order: 2;
+        margin-left: 12px;
+    }
+}
+
+
+
+
+main {
+    background-image:
+    linear-gradient(180deg,  rgba(35, 0, 30, 0.0001) 0%, rgba(35,0,30,1) 100%),
+    url('../img/mainBG.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 42px;
+    height: 100vh;
+    .main-section {
+        max-width: 1300px;
+        margin: 0 auto;
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 50px auto 80px auto;
+            a {
+                color: white;
+            }
+            .logo {
+                display: flex;
+                justify-content: space-around;
+                .langs {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 14px;
+                    margin-left: 23px;
+                    margin-top: 5px;
+                    label {
+                        margin-bottom: 5px;
+                        cursor: pointer;
+                        input {
+                            display: none;
+                            &:checked {
+                                &~span {
+                                    color: #F2F2F2;
+                                    
+                                    &::before {
+                                        border-color: transparent;
+                                        background: linear-gradient(180deg, #C9315C 0%, #A11F44 100%);
+                                        
+                                    }
+                                }
+                            }
+                        }
+                        span {
+                            display: flex;
+                            align-items: center;
+                            font-weight: bold;
+                            &::before {
+                                content: "";
+                                display: block;
+                                margin-right: 7px;
+                                border-radius: 100%;
+                                border: 2px solid rgba(151, 151, 151, 0.398721);
+                                width: 5px;
+                                height: 5px;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+            nav {
+                display: flex;
+                justify-content: space-around;
+                opacity: 0.7;                
+                .menu {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 18px;
+                    list-style: none;
+                    font-weight:300;
+                    li{
+                        margin-right: 40px;
+                        a {
+                            &:hover {
+                                width: 100%;
+                                &::after {
+                                    width: 100%;
+                                }
+                            }
+                            &::after {
+                                content: "";
+                                display: block;
+                                height: 2px;
+                                background-color: #535353;
+                                width: 0%;
+                                transition: 0.2s;
+                            }
+                        }
+                    }
+                }
+            }                        
+            .phone {    
+                // margin-right: 80px;
+                display: flex;
+                align-items: center;
+                &__icon {
+                    position: relative;
+                    width: 60px;
+                    height: 60px;
+                    margin-left: 20px;
+                    &::before {
+                        content: url("../img/phone_icon.png");
+                        display: block;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 60px;
+                        height: 60px;
+                        background-color: #C9315C;
+                        border-radius: 100%;
+                        position: absolute;
+                    }
+                }
+                a:not(.phone__icon) {
+                    position: relative;
+                    font-size: 18px;
+                    &::after {
+                        content: "заказать звонок";
+                        display: block;
+                        font-size: 14px;
+                        text-align: right;
+                        margin-top: 10px;
+                        opacity: 0.5;
+                    }
+                   
+                }
+            }
+        }
+        .advantages {
+            margin-bottom: 196px;
+            li {
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 8px;
+                    margin-right: 20px;
+                    height: 8px;
+                    border: 4px solid #C9315C;
+                    border-radius: 100%;
+                }
+            }
+        }
+    }
+}
+
+.girls {    
+    max-width: 1300px;
+    margin: 0 auto;
+    .wanna-more__button {
+        margin: 32px auto 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    &-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__item {
+            border-radius: 3px;
+            position: relative;
+            width: fit-content;
+            height: fit-content;
+            margin-bottom: 28px;
+            .girls-card__description {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 70px;
+                background-color: #fff;
+                color: #1A1717;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 17px;
+                .girls-card__text {
+                    display: flex;
+                    flex-direction: column;                    
+                    p {
+                        font-size: 11px;
+                        opacity: 0.5;
+                        line-height: 12px;
+                    }
+                    h4 {
+                        font-size: 21px;
+                        line-height: 25px;
+                    }
+                    .height {
+                        margin-right: 15px;
+                    }
+                }
+                .girls-card__call-button {
+                    a {
+                        display: block;
+                        background-color: #64B161;
+                        border: none;
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        &::after {
+                            content: url("../img/whatsapp.png");
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sauna {
+    background-image:
+    linear-gradient(0deg, rgba(35,0,30,1) 0%, rgba(0,0,0,0) 50%, rgba(35,0,30,1) 100%),
+    url("../img/saunaBG.png");
+    height: 1171px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    margin-top: -200px;
+    margin-bottom: -200px;
+    &__wrapper {
+        max-width: 1300px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+    &__text {
+        background: #FDCA40;
+        border-radius: 2px;
+        padding: 25px 39px;
+        width: 400px;
+        height: 170px;
+        p {
+            font-size: 23px;
+            line-height: 38px;
+            color: #23001E;
+        }
+    }
+}
+
+.services {  
+    max-width: 1300px;
+    margin: 0 auto;
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__banner {
+        width: 509px;
+        height: 761px;
+        background: #DF2935;
+        border-radius: 2px;
+        padding: 25px;
+        .banner__img {
+            margin: 0 0 29px 0 ;
+        }
+        .banner__text {
+            font-size: 40px;
+            line-height: 60px;
+            color: #23001E;
+            margin-bottom: 40px;
+            margin-left: 28px;
+        }
+        .banner__btn {
+            margin-left: 28px;
+            a {
+                background: #080708;
+                width: fit-content;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;       
+    }
+    &__item {
+        display: flex;
+        margin-bottom: 30px;   
+    }
+    &__image {
+        margin-right: 30px;
+    }
+    &__description {
+        font-size: 21px;
+        line-height: 25px;
+        color: #FFFFFF;
+    }
+    &__name {
+        margin: 10px 0 8px 0;
+    }
+    &__price {
+        color: #C9315C;
+        font-weight: bold;
+    }
+}
+
+.photos {
+    max-width: 1300px;
+    margin: 80px auto;
+    &__slider {
+        div {
+            img {
+                border-radius: 5px;
+                margin-right: 50px;
+            }
+        }
+    }
+    &__count {
+        text-align: right;
+        margin-top: -10px;
+        color: #F2F2F2;
+        opacity: 0.5;
+    }
+}
+
+.contacts  {
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    &__sidebar {
+        p {
+            font-size: 18px;
+            line-height: 22px;      
+            color: #F2F2F2;
+            margin-bottom: 10px;
+            a {
+                color: white;
+                line-height: 30px;
+            }
+            span {
+                opacity: 0.5;
+            }
+            strong {
+                font-size: 21px;
+                line-height: 25px;
+                font-weight: bold;
+                opacity: 1;
+            }
+        }
+    }
+    &__btn {
+        margin-top: 20px;
+        width: fit-content;
+    } 
+    &__undergrounds {
+        font-size: 14px;
+        line-height: 17px;
+        color: #F2F2F2;
+        opacity: 0.5;
+        margin-bottom: 25px;
+        li {
+            margin-bottom: 5px;
+        }
+    }
+    &__map {
+        width: 711px;
+        height: 426px;
+        background-color: grey;
+        margin-right: 55px;
+        border-radius: 5px;
+    }
+    .privacy-policy {
+        margin-top: 30px;
+        margin-left: 15px;
+        a {
+            font-size: 14px;
+            line-height: 21px;
+            text-decoration: underline;
+            color: #FFFFFF;
+        }
+    }
+}

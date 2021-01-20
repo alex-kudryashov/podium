@@ -1,0 +1,196 @@
+@media (max-width: 1100px) {
+  h1 {
+    font-size: 27px;
+    text-align: center;
+    line-height: 40px;
+    padding: 15px;
+  }
+
+  h2 {
+    text-align: center;
+    width: 100%;
+    font-size: 27px;
+    margin-bottom: 20px;
+  }
+
+  main {
+    height: fit-content;
+    background-size: 170%;
+    background-position: top right 70%;
+    padding: 20px;
+  }
+  main .main-section header {
+    margin: 0 0 80px 0;
+  }
+  main .main-section header .logo img {
+    max-width: 120px;
+  }
+  main .main-section header nav {
+    display: none;
+  }
+  main .main-section .advantages {
+    margin: 50px 0 0 0;
+  }
+  main .main-section .advantages li {
+    align-items: flex-start;
+    font-size: 14px;
+  }
+  main .main-section .advantages li::before {
+    margin-right: 10px;
+  }
+  main .phone a:not(.phone__icon) {
+    display: none;
+  }
+
+  .girls-cards {
+    justify-content: center;
+  }
+  .girls-cards__item:not(:nth-child(1)) {
+    display: none;
+  }
+
+  .sauna {
+    background-size: 120%;
+    background-position: center 0;
+    margin: 0;
+    height: 100%;
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+  .sauna__wrapper {
+    margin: 0;
+    width: 100%;
+  }
+  .sauna__content {
+    flex-flow: wrap column-reverse;
+  }
+  .sauna__text {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    width: 100%;
+    height: auto;
+  }
+  .sauna__img {
+    margin-bottom: -30px;
+    width: 40%;
+  }
+  .sauna__img img {
+    width: 100%;
+  }
+
+  .services__wrapper {
+    justify-content: center;
+  }
+  .services__banner {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .services__banner .banner__img {
+    width: auto;
+    margin-top: -50px;
+  }
+  .services__banner .banner__img img {
+    width: 100%;
+  }
+  .services__banner .banner__text {
+    margin: 0;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+  .services__banner .banner__btn {
+    margin-left: 0;
+  }
+  .services__list {
+    margin-bottom: 70px;
+  }
+  .services__item {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 95%;
+    margin-bottom: 20px;
+  }
+  .services__image {
+    margin-right: 0;
+    width: 100%;
+  }
+  .services__image img {
+    width: 100%;
+  }
+
+  .photos {
+    overflow: hidden;
+  }
+  .photos__slider {
+    width: 100%;
+    padding: 0 5px;
+  }
+  .photos__slider div img {
+    max-height: 270px;
+  }
+
+  .contacts {
+    text-align: center;
+  }
+  .contacts__content {
+    align-items: center;
+  }
+  .contacts__map {
+    width: 100%;
+    height: 180px;
+    margin-right: 0;
+  }
+  .contacts__sidebar {
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .contacts__btn .call-button {
+    margin: 0px;
+  }
+  .contacts__undergrounds {
+    margin-top: 10px;
+  }
+
+  .privacy-policy {
+    margin: 0;
+  }
+}
+@media (max-width: 1300px) {
+  h2 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .sauna__wrapper {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .photos__slider {
+    width: 100%;
+  }
+
+  .contacts, .girls-cards, .services__wrapper {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .girls-cards {
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+}
+
+/*# sourceMappingURL=mobile.css.map */
